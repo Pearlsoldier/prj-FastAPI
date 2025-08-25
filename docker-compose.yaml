@@ -1,0 +1,9 @@
+version: '3'
+services:
+  demo-app:
+    build: .
+    volumes:
+      - .dockervenv:/src/.venv
+      - .:/src
+    ports:
+      - 8066:8000  # ホストマシンのポート8066を、docker内のポート8066に接続する
